@@ -1,0 +1,47 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww28600\viewh16580\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 1. To run the entropy estimation, run the file script_entropy.py as python script_entropy.py  [filename] [entrpy_type] [seq_len](optional)\
+\
+	filename(str): path of the file with raw random data\
+\
+	entropy type(str): choose from \
+			1) Bit Entropy(Calculated simply based on  the number of 1s and 0s in the input:\
+				a) Shanon (bit_shanon)\
+				b) Collision (bit_collision)\
+				c) Minimum (bit_minimum)\
+				d) Renyi Half (bit_renyi_half)\
+			2) Accurate Minimum Entropy\
+				a) Shanon (acc_min_shanon)\
+				b) Collision (acc_min_collision)\
+				c) Minimum (acc_min_minimum)\
+				d) Renyi Half (acc_min_renyi_half) \
+			\
+	seq_len(int) (if Accurate Minimum entropy is chosen): Length of the sub sequences to 	calculate the entropy with.\
+\
+\
+2. To run the Von Neumann extractor, run the file von_neumann.py as python von_neumann.py  [filename]\
+\
+	filename(str): path of the file with raw random data\
+\
+\
+3. To run the matrix hashing extractor, run the file matrix_hash_ext.py  as python matrix_hash_ext.py [filename] [matrix_file]\
+\
+	file_name(str): path of the file with raw random data \
+	matrix_file(str): path of the file with the random seeded matrix\
+\
+\
+4. The generate a seed matrix from raw random source,  run the file seed_2_matrix.py  as python seed_2_matrix.py [f_in] [rows] [columns] [seed_buff]\
+\
+	f_in(str): path of the file with raw random data \
+	rows(int): Number of rows of the matrix\
+	columns(int): Number of columns of the matrix\
+	seed_buff(int): Amount of space between each raw input taken from the file\
+\
+\
+	Output: A file with the seed matrix with name \'91seed_matrix.txt\'92. The rest of the files are 	intermediate files, so can be ignored.\
+}
